@@ -1,30 +1,39 @@
-# Example extension
+# OpenPorts Plugin para OCS Inventory
 
-**A simple plugin example**
+Este es un plugin para OCS Inventory que permite almacenar y gestionar los puertos abiertos en un equipo. Proporciona información detallada sobre los puertos abiertos, lo que facilita el monitoreo y la administración de la seguridad de red.
 
-This plugin does absolutely nothing. Its meant to show the OCS' extension engine possibilities.
+## Características
 
-**Webconsole related files :**
+- Descubre y registra automáticamente los puertos abiertos en el equipo.
+- Recopila información detallada sobre cada puerto abierto, incluyendo el número de puerto, el protocolo utilizado y el estado del puerto.
+- Realiza un seguimiento de los cambios en los puertos abiertos a lo largo del tiempo, lo que permite identificar posibles modificaciones o configuraciones incorrectas.
+- Proporciona una interfaz gráfica intuitiva para visualizar y buscar los puertos abiertos registrados en el equipo.
 
-The following files allow a new extension to be displayed on the web console, creating the corresponding table(s), hooks, and functionalities.
+## Requisitos previos
 
-* install.php > Creates a new plugin table in OCS database / destroys it on removal of the plugin.
-* infos.json > Stores general informations about plugin, such as name, author, version, etc. These will be displayed on https://plugins.ocsinventory-ng.org/.
-* hook.xml > Creates a new hook which lets OCS know a new plugin has been installed and new data should be displayed on the web console. It can create computer details entries or menu / sub-menu. Languages are also managed from there.
-* cd_xxxxx > Naming convention requires the file's name to begin with "cd_" ("cd" stands for "computer details"). Detailed informations can be found in hook.xml.
-* ms_xxxxx > Naming convention requires the file's name to begin with "ms_" ("ms" stands for "main section"). Detailed informations can be found in hook.xml.
+- OCS Inventory Server: Asegúrate de tener instalado y configurado OCS Inventory Server en tu entorno.
 
+## Instalación
 
-**Communication server related files :**
+1. Descarga el archivo ZIP del plugin desde el repositorio oficial.
+2. Descomprime el archivo ZIP en la carpeta de plugins de OCS Inventory Server.
+3. Reinicia el servicio de OCS Inventory Server para cargar el plugin.
 
-These files are required when something is needed from the agent (e.g. reporting of new data), they can be omitted if the extension doesn't require anything from the agent.
+## Uso
 
-* APACHE > Map.pm > Link file between communication server and database.
-* APACHE > plugin_ex.conf > Require the server to load Map.pm file from plugin
+1. Accede a la interfaz web de OCS Inventory Server.
+2. Navega hasta la sección de "Puertos Abiertos" o "OpenPorts".
+3. Visualiza la lista de puertos abiertos registrados en el equipo.
+4. Utiliza las opciones de búsqueda y filtrado para encontrar puertos específicos.
+5. Realiza las acciones necesarias según tus necesidades (por ejemplo, agregar comentarios, marcar puertos como seguros, etc.).
+6. Utiliza la funcionalidad de seguimiento de cambios para identificar modificaciones en los puertos abiertos.
 
-**Misc :** 
+## Contribuciones
 
-Other files such as README, license, agent files ...
+Las contribuciones son bienvenidas. Si encuentras algún problema o tienes alguna sugerencia de mejora, por favor, abre un problema en el repositorio oficial o envía una solicitud de extracción.
 
-* agent > This folder is only used to store the agent scripts, it is not required on the server's side. 
+## Licencia
+
+Este plugin se distribuye bajo la Licencia MIT. Para más detalles, consulta el archivo LICENSE.
+
 
