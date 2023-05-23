@@ -1,0 +1,13 @@
+{
+"displayName" : "Puertos",
+"author" : ["Luis Martinez Borges"],
+"contributor" : [],
+"supportedAgent" : ["Windows"],
+"version" : "1",
+"licence" : "GPLv2",
+"description" : 
+    {
+        "fr" : "Un exemple de plugin",
+        "en" : "A plugin example 2"
+    }
+}
